@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Audit Extension",
+  "version": "1.0.0",
+  "description": "Sobrepõe anotações de auditoria em apps React+Supabase",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Audit Extension"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content-script.js"],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/injected.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

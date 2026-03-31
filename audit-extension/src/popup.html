@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 280px; padding: 16px; font-family: monospace;
+      background: #1e1e2e; color: #cdd6f4; margin: 0;
+    }
+    h2 { font-size: 13px; margin: 0 0 12px; color: #89b4fa; }
+    .indicator {
+      font-size: 11px; color: #6c7086; margin-bottom: 12px;
+      min-height: 14px;
+    }
+    button {
+      width: 100%; padding: 8px; margin-bottom: 8px; cursor: pointer;
+      border: 1px solid #45475a; border-radius: 4px;
+      background: #313244; color: #cdd6f4; font-size: 12px; font-family: monospace;
+    }
+    button:hover { background: #45475a; }
+    #homologarBtn {
+      background: #a6e3a1; color: #1e1e2e; border-color: #a6e3a1;
+      font-weight: bold; font-size: 13px; padding: 10px;
+    }
+    #homologarBtn:hover { background: #94d494; }
+    #homologarBtn.active {
+      background: #f38ba8; color: #1e1e2e; border-color: #f38ba8;
+    }
+    #homologarBtn.active:hover { background: #e07090; }
+    .tab-status {
+      font-size: 11px; color: #6c7086; margin-bottom: 8px; text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Audit Extension</h2>
+  <div class="indicator" id="indicator">Nenhum JSON carregado</div>
+  <button id="importBtn">Importar audit-knowledge.json</button>
+  <input type="file" id="fileInput" accept=".json" style="display:none">
+  <div class="tab-status" id="tabStatus"></div>
+  <button id="homologarBtn">▶ Homologar esta aba</button>
+  <script src="popup.js"></script>
+</body>
+</html>

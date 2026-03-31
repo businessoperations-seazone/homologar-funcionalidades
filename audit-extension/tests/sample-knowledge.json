@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "repo": "test/test-app",
+    "generated_at": "2026-03-30",
+    "app_name": "Test App"
+  },
+  "edgeFunctions": {
+    "calculate-pricing": {
+      "description": "Calcula preço da reserva",
+      "params": ["checkin", "checkout"],
+      "returns": "{ total }",
+      "calledBy": ["useReservation"]
+    }
+  },
+  "elements": [
+    {
+      "type": "trigger",
+      "networkPattern": "functions/v1/calculate-pricing",
+      "label": "Calcular Preço",
+      "badge": "API",
+      "description": "Dispara o cálculo de precificação",
+      "action": "POST calculate-pricing → retorna total"
+    },
+    {
+      "type": "display",
+      "labelMatch": "Total",
+      "badge": "CALC",
+      "description": "Exibe o total calculado",
+      "source": "useReservation → calculate-pricing",
+      "formula": "sum(rates)"
+    }
+  ]
+}
