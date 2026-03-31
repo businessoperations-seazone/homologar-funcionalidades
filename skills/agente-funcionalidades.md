@@ -25,7 +25,7 @@ SEMPRE analise 100% estatica
 ## Parametro de entrada
 
 ```
-/agente-funcionalidades-v4 https://github.com/org/repo-name
+/agente-funcionalidades https://github.com/org/repo-name
 ```
 
 Se nenhuma URL for fornecida, pergunte ao usuario.

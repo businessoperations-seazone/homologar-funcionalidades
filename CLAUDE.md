@@ -4,19 +4,19 @@ Ferramentas para auditar apps vibe-coded (Lovable/React+Supabase): uma skill do 
 
 ## Setup obrigatório
 
-**Ao abrir este projeto pela primeira vez, verifique se a skill está instalada:**
+**Ao abrir este projeto pela primeira vez, verifique se o comando está instalado:**
 
 ```bash
-ls ~/.claude/skills/agente-funcionalidades
+ls ~/.claude/commands/agente-funcionalidades.md
 ```
 
-Se o diretório não existir, rode antes de qualquer coisa:
+Se não existir, rode antes de qualquer coisa:
 
 ```bash
 ./setup.sh
 ```
 
-O script instala a skill via symlink e prepara a pasta `auditorias/`. Depois, siga as instruções impressas para carregar a extensão no Chrome.
+O script instala o comando via symlink e prepara a pasta `auditorias/`. Depois, siga as instruções impressas para carregar a extensão no Chrome.
 
 ## Como usar
 
@@ -37,9 +37,9 @@ Importe esse arquivo na extensão Chrome pelo popup (botão "Carregar JSON").
 ```
 audit-extension/   # extensão Chrome (carregar no Chrome como unpacked)
 skills/
-  agente-funcionalidades/SKILL.md   # skill do Claude Code
+  agente-funcionalidades.md   # slash command do Claude Code
 auditorias/        # JSONs gerados pelas auditorias (versionados)
-setup.sh           # instala skill + prepara ambiente
+setup.sh           # instala comando via symlink + prepara ambiente
 ```
 
 ## Regras
